@@ -1,157 +1,78 @@
-# Vishwanath-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Animated Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+    <title>Amazon Clone</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            overflow-x: hidden;
-        }
-
-        header {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            animation: fadeIn 2s ease;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            animation: slideDown 1.5s ease;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            opacity: 0.8;
-        }
-
-        section {
-            padding: 60px 10%;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5rem;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: #00eaff;
-            display: block;
-            margin: 10px auto;
-        }
-
-        .about {
-            text-align: center;
-            animation: fadeInUp 2s ease;
-        }
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s, background 0.3s;
-        }
-
-        .skill-box:hover {
-            transform: translateY(-10px);
-            background: rgba(0, 234, 255, 0.2);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f3f3f3; }
+        header { background-color: #131921; color: white; padding: 10px; display: flex; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; margin-right: 20px; }
+        .search { flex: 1; display: flex; }
+        .search input { flex: 1; padding: 8px; }
+        .search button { padding: 8px 12px; background-color: #febd69; border: none; }
+        nav { margin-left: 20px; }
+        nav a { color: white; margin: 0 10px; text-decoration: none; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 20px; background: white; }
+        .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .product { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        .product img { max-width: 100%; height: 150px; }
+        .product h3 { font-size: 16px; margin: 10px 0; }
+        .product p { color: #b12704; font-weight: bold; }
+        .product button { background-color: #f0c14b; border: none; padding: 8px; cursor: pointer; }
+        footer { background-color: #131921; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+        footer a { color: #ddd; margin: 0 10px; text-decoration: none; }
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">Amazon</div>
+        <div class="search">
+            <input type="text" placeholder="Search for products...">
+            <button>Search</button>
+        </div>
+        <nav>
+            <a href="#">Hello, Sign in</a>
+            <a href="#">Returns & Orders</a>
+            <a href="#">Cart</a>
+        </nav>
+    </header>
 
-<header>
-    <div>
-        <h1>Hello, I'm <span style="color:#00eaff;">Vishwanath</span></h1>
-        <p>Web Developer | Designer | Learner</p>
+    <div class="container">
+        <h2>Today's Deals</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/200x150?text=Product+1" alt="Product 1">
+                <h3>Wireless Headphones</h3>
+                <p>$49.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200x150?text=Product+2" alt="Product 2">
+                <h3>Smartphone Case</h3>
+                <p>$19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200x150?text=Product+3" alt="Product 3">
+                <h3>Laptop Stand</h3>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200x150?text=Product+4" alt="Product 4">
+                <h3>Bluetooth Speaker</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
     </div>
-</header>
 
-<section>
-    <h2>About Me</h2>
-    <p class="about">
-        I am a passionate web developer who loves creating animated and modern websites
-        using HTML and CSS. I enjoy learning new technologies and building cool projects.
-    </p>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill-box">HTML5</div>
-        <div class="skill-box">CSS3</div>
-        <div class="skill-box">JavaScript</div>
-        <div class="skill-box">Responsive Design</div>
-    </div>
-</section>
-
-<footer>
-    <p>© 2025 Vishwanath | Animated Portfolio</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2023 Amazon Clone. All rights reserved.</p>
+        <a href="#">Conditions of Use</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Interest-Based Ads</a>
+    </footer>
 </body>
 </html>
